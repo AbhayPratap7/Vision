@@ -1,0 +1,39 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer-left {
+    position: relative;
+}
+
+.developer-name {
+    cursor: pointer;
+}
+
+.developer-name::after {
+    content: "6376351281";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.developer-name:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
